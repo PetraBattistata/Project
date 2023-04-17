@@ -21,6 +21,7 @@ agg_ita3 = ['nervoso', 'minuscolo', 'diligente', 'sincero', 'primo',
 translator = Translator()
 
 niveau = st.selectbox('Suche dein Niveau aus!', ('A1', 'A2', 'B1'))
+var = ''
 
 if niveau == 'A1': 
   var = random.choice(agg_ita1)
