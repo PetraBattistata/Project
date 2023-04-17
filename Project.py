@@ -1,7 +1,7 @@
 import streamlit as st
 import json, requests
 from random import choice
-from googletrans import translator
+from googletrans import Translator
 
 Counter1 = 3
 Counter2 = 3
