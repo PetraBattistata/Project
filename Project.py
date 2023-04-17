@@ -1,6 +1,6 @@
 import streamlit as st
 import json, requests
-from random import choice
+import random
 from googletrans import Translator
 
 Counter1 = 3
