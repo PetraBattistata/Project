@@ -43,33 +43,5 @@ while Counter1 != 0:
   if Counter1 == 0:
     st.write('Game over!')
 
-    url = https://api.datamuse.com/words?rel_ant=
 
-  
-  
-gegenteil_cor = 
-
-gegenteil = st.text_input('Sag mir jetzt das Gegenteil!')
-
-while Counter2 != 0:  
-  If gegenteil == gegenteil_cor:
-    st.write('Richtig!')
-  else
-    st.write('Versuch es noch einmal!')
-    Counter2 -=1
-    if Counter2 == 0
-    st.write('Game over!')
-
-
- #cancellare elemento  dopo averlo usato
-    
-
- #1creare lista agg in italiano
-  #2 random choice di agg in ital
-  #3 con google trans ottenere la traduzione dell agg in ted
-  #4 paragonare input utente con traduzione
-  #if correct: haggele, if wrong, try again (2)
-  #if correct: API datamuse cerca gegenteil
-  # paragonare nuovo input dell'utente a gegenteil
-    #if correct: haggele, if wrong, try again (2)
  
