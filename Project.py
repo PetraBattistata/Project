@@ -32,7 +32,7 @@ elif niveau == 'B1':
 
 st.write(var) 
 
-Adj_cor = translator.translate(var,dest=de)
+Adj_cor = translator.translate(var,dest='de')
 
 Adj_deu = st.text_input('Sag mir den Namen des Adjektivs in Deutsch!','')
 
