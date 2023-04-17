@@ -28,7 +28,7 @@ elif niveau == 'A2':
   var = random.choice(agg_ita2)
 elif niveau == 'B1': 
   var = random.choice(agg_ita3)
- st.write(var) 
+st.write(var) 
 
 Adj_cor = translator.translate(var,dest=de)
 
@@ -42,6 +42,3 @@ while Counter1 != 0:
     Counter1 -=1
   if Counter1 == 0:
     st.write('Game over!')
-
-
- 
