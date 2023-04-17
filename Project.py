@@ -34,7 +34,7 @@ st.write(var)
 
 Adj_cor = translator.translate(var,dest=de)
 
-Adj_deu = st.text_input('Sag mir den Namen des Adjektivs in Deutsch!')
+Adj_deu = st.text_input('Sag mir den Namen des Adjektivs in Deutsch!','')
 
 while Counter1 != 0:  
   if Adj_deu == Adj_cor:
