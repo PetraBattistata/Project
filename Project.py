@@ -36,11 +36,11 @@ Adj_cor = translator.translate(var,dest='de')
 
 Adj_deu = st.text_input('Sag mir den Namen des Adjektivs in Deutsch!','')
 
-while Counter1 != 0:  
-  if Adj_deu == Adj_cor:
-    st.write('Richtig!')
-  else:
-    st.write('Versuch es noch einmal!')
-    Counter1 -=1
-  if Counter1 == 0:
-    st.write('Game over!')
+  
+if Adj_deu == Adj_cor:
+           st.write('Richtig!')
+else:
+           st.write('Versuch es noch einmal!')
+           Counter1 -=1
+if Counter1 == 0:
+           st.write('Game over!')
