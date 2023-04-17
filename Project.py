@@ -29,6 +29,7 @@ elif niveau == 'A2':
   var = random.choice(agg_ita2)
 elif niveau == 'B1': 
   var = random.choice(agg_ita3)
+
 st.write(var) 
 
 Adj_cor = translator.translate(var,dest=de)
