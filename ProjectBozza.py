@@ -7,7 +7,7 @@ from googletrans import Translator
 st.title('Counter Example')
 if 'count' not in st.session_state:
     st.session_state.count = 3
-if st.session_state.count <= 0:
+if st.session_state.count == 0:
     st.stop()
     
 agg_ita1 = ['giovane', 'nuovo', 'aperto', 
@@ -51,6 +51,6 @@ elif Adj_eng.text == Adj_cor.text:
     st.write('right!')
 
 st.write('Count = ', st.session_state.count)
-if st.session_state.count <= 0:
+if st.session_state.count == 0:
     st.write('Game over!')
 
