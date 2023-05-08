@@ -39,14 +39,16 @@ Adj_cor = translator.translate(var,dest='en')
 Adj_eng = st.text_input('Tell me the name of this adjective in english!','')
 
 if Adj_eng is not None:
-           while Counter1 > 0:
+           if Counter1 > 0:
                       if Adj_eng == Adj_cor:
                                  st.write('Right!')
                       if not Adj_eng == Adj_cor:
                                  st.write('Try again!')
                                  Counter1 -= 1
+           elif Counter1 <= 0:
                       st.write('Game over!')
-         
+           else:
+                      pass
 #'Now tell me the antonym of this word!' 
            
                       
