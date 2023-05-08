@@ -7,8 +7,8 @@ Counter1 = 3
 Counter2 = 3
 
 agg_ita1 = ['giovane', 'nuovo', 'aperto', 
-           'grande', 'caldo', '', 
-           '', 'amichevole', 'alto', 'lungo' ]
+           'grande', 'caldo', 
+            'amichevole', 'alto', 'lungo' ]
 
 agg_ita2 = ['bagnato', 'conosciuto', 'pericoloso', 'sano', 'morbido', 
            'pesante', 'pieno', 'veloce', 'facile'
