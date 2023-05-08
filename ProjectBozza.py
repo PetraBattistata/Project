@@ -3,6 +3,7 @@ import json, requests
 import random
 from googletrans import Translator
 
+Counter1 = 3
 
 st.title('Counter Example')
 if 'Counter1' not in st.session_state:
