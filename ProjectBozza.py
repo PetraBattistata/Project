@@ -4,7 +4,7 @@ import random
 from googletrans import Translator
 
 
-st.title('Counter Example')
+st.title('Adjectives')
 if 'count' not in st.session_state:
     st.session_state.count = 4
 if st.session_state.count <= 1:
