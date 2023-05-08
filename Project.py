@@ -20,7 +20,7 @@ agg_ita3 = ['nervoso', 'minuscolo', 'diligente', 'sincero', 'primo',
 
 translator = Translator()
 
-niveau = st.selectbox('Suche dein Niveau aus!', ('A1', 'A2', 'B1'))
+niveau = st.selectbox('Choose your Level!', ('A1', 'A2', 'B1'))
 var = ''
 
 if niveau == 'A1': 
@@ -29,18 +29,23 @@ elif niveau == 'A2':
   var = random.choice(agg_ita2)
 elif niveau == 'B1': 
   var = random.choice(agg_ita3)
+else:
+  pass
 
 st.write(var) 
 
 Adj_cor = translator.translate(var,dest='en')
 
-Adj_deu = st.text_input('Tell me the name of this adjective in english!','')
+Adj_eng = st.text_input('Tell me the name of this adjective in english!','')
 
-if Adj_deu is not None:
-           if Adj_deu == Adj_cor:
-                      st.write('Richtig!')
-           else:
-                      st.write('Versuch es noch einmal!')
-                      Counter1 -=1
-           if Counter1 == 0:
+if Adj_eng is not None:
+           if Counter1 > 0:
+                      if Adj_eng == Adj_cor:
+                                 st.write('Right!')
+                      else:
+                                 st.write('Try again!')
+                                 Counter1 -=1
+           elif Counter1 <= 0:
                       st.write('Game over!')
+           else:
+                      
