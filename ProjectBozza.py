@@ -52,7 +52,7 @@ if 'Start':
     if Adj_eng != Adj_cor.text:
         st.write('Try again stupido!')
         st.session_state.count -= 1 
-    elif Adj_eng.text == Adj_cor.text:
+    elif Adj_eng == Adj_cor.text:
         st.write('right!')
         st.session_state.count += 1 
 
