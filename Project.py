@@ -43,7 +43,7 @@ if Adj_eng is not None:
                       if Adj_eng == Adj_cor:
                                  st.write('Right!')
                       if not Adj_eng == Adj_cor:
-                                 st.write('Try again!')
+                                 #st.write('Try again!')
                                  Counter1 -= 1
            elif Counter1 <= 0:
                       st.write('Game over!')
