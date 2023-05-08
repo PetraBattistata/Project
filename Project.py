@@ -5,7 +5,7 @@ from googletrans import Translator
 
 Counter1 = 3
 if 'Counter1' not in st.session_state:
-    st.session_state['Counter1'] = -1
+    st.session_state['Counter1'] = Counter1 -1
 Counter2 = 3
 
 agg_ita1 = ['giovane', 'nuovo', 'aperto', 
