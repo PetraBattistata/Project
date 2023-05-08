@@ -15,22 +15,22 @@ if st.session_state.count <= 1:
 st.button('Start')
 
 if 'Start':    
-agg_ita1 = ['giovane', 'nuovo', 'aperto', 
+    agg_ita1 = ['giovane', 'nuovo', 'aperto', 
            'grande', 'caldo', 
             'amichevole', 'alto', 'lungo' ]
 
-agg_ita2 = ['bagnato', 'conosciuto', 'pericoloso', 'sano', 'morbido', 
+    agg_ita2 = ['bagnato', 'conosciuto', 'pericoloso', 'sano', 'morbido', 
            'pesante', 'pieno', 'veloce', 'facile'
            'silenzioso', 'dolce']
 
-agg_ita3 = ['nervoso', 'minuscolo', 'diligente', 'sincero', 'primo', 
+    agg_ita3 = ['nervoso', 'minuscolo', 'diligente', 'sincero', 'primo', 
           'paziente', 'ordinato', 'presto', 'costoso',
           'interessante', 'coraggioso', 'sazio' ]
 
-translator = Translator()
+    translator = Translator()
 
-niveau = st.selectbox('Choose your Level!', ('A1', 'A2', 'B1'))
-var = ''
+    niveau = st.selectbox('Choose your Level!', ('A1', 'A2', 'B1'))
+    var = ''
 
 
     if niveau == 'A1': 
@@ -41,19 +41,19 @@ var = ''
         var = random.choice(agg_ita3)
     else:
         pass
-st.write(var) 
+    st.write(var) 
 
-Adj_cor = translator.translate(var,dest='en')
-Adj_eng = st.text_input('Tell me the name of this adjective in english!','')
+    Adj_cor = translator.translate(var,dest='en')
+    Adj_eng = st.text_input('Tell me the name of this adjective in english!','')
     #agg_ita1
 
     
 
-if Adj_eng != Adj_cor.text:
-    st.write('Try again stupido!')
-    st.session_state.count -= 1 
-elif Adj_eng.text == Adj_cor.text:
-    st.write('right!')
+    if Adj_eng != Adj_cor.text:
+        st.write('Try again stupido!')
+        st.session_state.count -= 1 
+    elif Adj_eng.text == Adj_cor.text:
+        st.write('right!')
 
 st.write('Count = ', st.session_state.count)
 #if st.session_state.count <= 1:
