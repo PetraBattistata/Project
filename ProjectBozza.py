@@ -17,4 +17,4 @@ if increment:
 st.write('Count = ', st.session_state.count)
 if st.session_state.count < 0:
     st.write('Game over!')
-    st.stop(increment)
+    del increment
