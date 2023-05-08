@@ -28,15 +28,17 @@ translator = Translator()
 niveau = st.selectbox('Choose your Level!', ('A1', 'A2', 'B1'))
 var = ''
 
+st.button('Start')
 
-if niveau == 'A1': 
-           var = random.choice(agg_ita1)
-elif niveau == 'A2': 
-           var = random.choice(agg_ita2)
-elif niveau == 'B1': 
-           var = random.choice(agg_ita3)
-else:
-           pass
+if 'Start':
+    if niveau == 'A1': 
+        var = random.choice(agg_ita1)
+    elif niveau == 'A2': 
+        var = random.choice(agg_ita2)
+    elif niveau == 'B1': 
+        var = random.choice(agg_ita3)
+    else:
+        pass
 st.write(var) 
 
 Adj_cor = translator.translate(var,dest='en')
