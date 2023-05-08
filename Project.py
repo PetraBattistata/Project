@@ -40,7 +40,7 @@ while Counter1 > 0:
            Adj_eng = st.text_input('Tell me the name of this adjective in english!','')
            
            if Adj_eng:
-                      if Adj_eng.text != Adj_cor.text:
+                      if Adj_eng != Adj_cor.text:
                                  st.write('Try again!')
                                  Counter1 -= 1
                                  st.write(Counter1)
