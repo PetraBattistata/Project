@@ -6,7 +6,7 @@ from googletrans import Translator
 Counter1 = 3
 
 st.title('Counter Example')
-if 'count' not in st.session_state:
+if Counter1 not in st.session_state:
     st.session_state.count = 3
 
     #agg_ita1
