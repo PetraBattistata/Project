@@ -8,6 +8,7 @@ st.title('Counter Example')
 if 'count' not in st.session_state:
     st.session_state.count = 4
 if st.session_state.count <= 1:
+    st.title('Game Over!')
     st.stop()
     
 agg_ita1 = ['giovane', 'nuovo', 'aperto', 
@@ -51,6 +52,6 @@ elif Adj_eng.text == Adj_cor.text:
     st.write('right!')
 
 st.write('Count = ', st.session_state.count)
-if st.session_state.count <= 1:
-    st.write('Game over!')
+#if st.session_state.count <= 1:
+    #st.write('Game over!')
 
