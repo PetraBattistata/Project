@@ -10,7 +10,11 @@ if 'count' not in st.session_state:
 if st.session_state.count <= 1:
     st.title('Game Over!')
     st.stop()
-    
+
+
+st.button('Start')
+
+if 'Start':    
 agg_ita1 = ['giovane', 'nuovo', 'aperto', 
            'grande', 'caldo', 
             'amichevole', 'alto', 'lungo' ]
@@ -28,9 +32,7 @@ translator = Translator()
 niveau = st.selectbox('Choose your Level!', ('A1', 'A2', 'B1'))
 var = ''
 
-st.button('Start')
 
-if 'Start':
     if niveau == 'A1': 
         var = random.choice(agg_ita1)
     elif niveau == 'A2': 
