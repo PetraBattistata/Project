@@ -16,16 +16,16 @@ st.button('Start')
 
 if 'Start':    
     agg_ita1 = ['giovane', 'nuovo', 'aperto', 
-           'grande', 'caldo', 
-            'amichevole', 'alto', 'lungo' ]
+                'grande', 'caldo', 
+                'amichevole', 'alto', 'lungo' ]
 
     agg_ita2 = ['bagnato', 'conosciuto', 'pericoloso', 'sano', 'morbido', 
-           'pesante', 'pieno', 'veloce', 'facile'
-           'silenzioso', 'dolce']
+                'pesante', 'pieno', 'veloce', 'facile'
+                'silenzioso', 'dolce']
 
     agg_ita3 = ['nervoso', 'minuscolo', 'diligente', 'sincero', 'primo', 
-          'paziente', 'ordinato', 'presto', 'costoso',
-          'interessante', 'coraggioso', 'sazio' ]
+                'paziente', 'ordinato', 'presto', 'costoso',
+                'interessante', 'coraggioso', 'sazio' ]
 
     translator = Translator()
 
