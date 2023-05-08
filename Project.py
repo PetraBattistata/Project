@@ -43,6 +43,7 @@ if Adj_eng:
                       if Adj_eng != Adj_cor:
                                  st.write('Try again!')
                                  Counter1 -= 1
+                                 st.write(Counter1)
                       elif Adj_eng == Adj_cor:
                                  st.write('right!')
            elif Counter1 <= 0:
