@@ -36,9 +36,9 @@ while Counter1 > 0:
            st.write(var) 
 
            Adj_cor = translator.translate(var,dest='en')
-           st.write(Adj_cor.text)
+           
            Adj_eng = st.text_input('Tell me the name of this adjective in english!','')
-           st.write(Adj_eng.text)
+           
            if Adj_eng:
                       if Adj_eng.text != Adj_cor.text:
                                  st.write('Try again!')
