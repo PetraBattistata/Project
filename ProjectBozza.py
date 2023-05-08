@@ -54,6 +54,7 @@ if 'Start':
         st.session_state.count -= 1 
     elif Adj_eng.text == Adj_cor.text:
         st.write('right!')
+        st.session_state.count += 1 
 
 st.write('Count = ', st.session_state.count)
 #if st.session_state.count <= 1:
