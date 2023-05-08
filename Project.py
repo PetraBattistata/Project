@@ -40,15 +40,14 @@ Adj_eng = st.text_input('Tell me the name of this adjective in english!','')
 
 if Adj_eng is not None:
            if Counter1 > 0:
-                      if Adj_eng == Adj_cor:
-                                 st.write('Right!')
-                      if not Adj_eng == Adj_cor:
-                                 #st.write('Try again!')
+                      if Adj_eng != Adj_cor:
                                  Counter1 -= 1
+                      elif Adj_eng == Adj_cor:
+                                 #st.write('Try again!')
+                                 st.write('right!')
            elif Counter1 <= 0:
                       st.write('Game over!')
-           else:
-                      pass
+              
 #'Now tell me the antonym of this word!' 
            
                       
