@@ -6,13 +6,13 @@ from googletrans import Translator
 Counter1 = 3
 Counter2 = 3
 
-agg_ita1 = ['giovane', 'nuovo', 'presente', 'aperto', 
-           'grasso', 'grande', 'caldo', 'chiaro', 
-           'occupato', 'amichevole', 'alto', 'lungo' ]
+agg_ita1 = ['giovane', 'nuovo', 'aperto', 
+           'grande', 'caldo', '', 
+           '', 'amichevole', 'alto', 'lungo' ]
 
-agg_ita2 = ['asciutto', 'conosciuto', 'pericoloso', 'malato', 'morbido', 
+agg_ita2 = ['bagnato', 'conosciuto', 'pericoloso', 'sano', 'morbido', 
            'pesante', 'pieno', 'veloce', 'facile'
-           'silenzioso', 'dolce', 'tanto']
+           'silenzioso', 'dolce']
 
 agg_ita3 = ['nervoso', 'minuscolo', 'diligente', 'sincero', 'primo', 
           'paziente', 'ordinato', 'presto', 'costoso',
@@ -39,16 +39,14 @@ Adj_cor = translator.translate(var,dest='en')
 Adj_eng = st.text_input('Tell me the name of this adjective in english!','')
 
 if Adj_eng is not None:
-           if Counter1 > 0:
+           while Counter1 > 0:
                       if Adj_eng == Adj_cor:
                                  st.write('Right!')
                       if not Adj_eng == Adj_cor:
                                  st.write('Try again!')
                                  Counter1 -= 1
-           elif Counter1 <= 0:
                       st.write('Game over!')
-           else:
-                      pass
-#'Now tell me the anthonym of this word!' 
+         
+#'Now tell me the antonym of this word!' 
            
                       
