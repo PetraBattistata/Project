@@ -3,7 +3,7 @@ import json, requests
 import random
 from googletrans import Translator
 
-Counter1 = 3
+
 Counter2 = 3
 
 agg_ita1 = ['giovane', 'nuovo', 'aperto', 
@@ -39,6 +39,7 @@ Adj_cor = translator.translate(var,dest='en')
 Adj_eng = st.text_input('Tell me the name of this adjective in english!','')
 
 if Adj_eng:
+           Counter1 = 3
            if Counter1 > 0:
                       if Adj_eng != Adj_cor:
                                  st.write('Try again!')
