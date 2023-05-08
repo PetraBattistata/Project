@@ -44,8 +44,11 @@ if Adj_eng is not None:
                                  st.write('Right!')
                       else:
                                  st.write('Try again!')
-                                 Counter1 -=1
+                                 Counter1 -= 1
            elif Counter1 <= 0:
                       st.write('Game over!')
            else:
+                      pass
+#'Now tell me the anthonym of this word!' 
+           
                       
