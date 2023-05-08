@@ -42,7 +42,7 @@ if Adj_eng is not None:
            if Counter1 > 0:
                       if Adj_eng == Adj_cor:
                                  st.write('Right!')
-                      else:
+                      if not Adj_eng == Adj_cor:
                                  st.write('Try again!')
                                  Counter1 -= 1
            elif Counter1 <= 0:
