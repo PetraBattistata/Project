@@ -46,7 +46,7 @@ if 'Start':
     Adj_cor = translator.translate(var,dest='en')
     Adj_eng = st.text_input('Tell me the name of this adjective in english!','')
     #agg_ita1
-
+    st.write(Adj_cor.text)
     
 
     if Adj_eng != Adj_cor.text:
