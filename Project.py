@@ -24,13 +24,13 @@ niveau = st.selectbox('Choose your Level!', ('A1', 'A2', 'B1'))
 var = ''
 
 if niveau == 'A1': 
-  var = random.choice(agg_ita1)
+           var = random.choice(agg_ita1)
 elif niveau == 'A2': 
-  var = random.choice(agg_ita2)
+           var = random.choice(agg_ita2)
 elif niveau == 'B1': 
-  var = random.choice(agg_ita3)
+           var = random.choice(agg_ita3)
 else:
-  pass
+           pass
 
 st.write(var) 
 
@@ -38,7 +38,7 @@ Adj_cor = translator.translate(var,dest='en')
 
 Adj_eng = st.text_input('Tell me the name of this adjective in english!','')
 
-if Adj_eng is not None:
+if Adj_eng:
            if Counter1 > 0:
                       if Adj_eng != Adj_cor:
                                  st.write('Try again!')
