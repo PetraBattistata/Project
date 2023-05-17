@@ -57,6 +57,7 @@ if word_input:
     st.write('Sbagliato!')
    elif word_ant == st.session_state.antonym:
     st.write('Esatto!')
+    word_input = st.empty()
     st.button('Next word')
      #word_input.text_input('inserisci la tua traduzione:',value = '')
     new_word(choice(words))
