@@ -60,5 +60,5 @@ if word_input:
   
     
 st.write(st.session_state.counter1)
-
+st.write(st.session_state.correct_word)
 
