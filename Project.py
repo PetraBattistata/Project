@@ -25,7 +25,9 @@ translator = Translator()
 trans = translator.translate(st.session_state.choice,src='it', dest= 'en')
 if 'word_trans' not in st.session_state:
  st.session_state['word_trans'] = trans.text
- 
+if 'correct_word' not in st.session_state:
+     st.session_state.correct_word = 0
+  
 def new_word(new_word):
  st.session_state.choice = new_word
  new_trans = translator.translate(new_word,src='it', dest= 'en')
@@ -60,8 +62,6 @@ if word_input:
      #word_input.text_input('inserisci la tua traduzione:',value = '')
     new_word(choice(words))
     st.write(st.session_state.choice)
-    if 'correct_word' not in st.session_state:
-     st.session_state.correct_word = 0
     st.session_state.correct_word +=1
 
 st.write('Tentativi rimasti:',st.session_state.counter2)    
