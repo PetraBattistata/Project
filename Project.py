@@ -54,7 +54,8 @@ if word_input:
     st.write('Sbagliato!')
    elif word_ant == st.session_state.antonym:
     st.write('Esatto!')
-    st.button('Next word')
+    if st.button('Next word'):
+     word_input.empty()
     new_word(choice(words))
     st.write(st.session_state.choice)
     st.session_state.correct_word +=1
