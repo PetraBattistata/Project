@@ -13,8 +13,8 @@ if st.session_state.counter1 == 0 or st.session_state.counter2 == 0:
  st.stop()
 
 word_input = st.empty()
-word_input.text_input('inserisci la tua traduzione:')
-#word_input = st.text_input('inserisci la tua traduzione:')
+#word_input.text_input('inserisci la tua traduzione:')
+word_input = st.text_input('inserisci la tua traduzione:')
 st.write('Tentativi rimasti:',st.session_state.counter1)
 
 words = ['forte','alto','ricco','pieno','grande','brutto']
