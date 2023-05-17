@@ -12,7 +12,7 @@ if st.session_state.counter1 == 0 or st.session_state.counter2 == 0:
  st.title('Game Over!')
  st.stop()
 
-word_input = st.text_input('inserisci la tua traduzione:')
+word_input = st.text_input('inserisci la tua traduzione:', 'Tentativi rimasti:',st.write(st.session_state.counter1))
 
 
 words = ['forte','alto','ricco','pieno','grande','brutto']
@@ -60,6 +60,6 @@ if word_input:
     st.session_state.correct_word +=1
   
     
-st.write(st.session_state.counter1)
+
 st.write(st.session_state.correct_word)
 
