@@ -22,12 +22,15 @@ translator = Translator()
 trans = translator.translate(st.session_state.choice,src='it', dest= 'en')
 if 'word_trans' not in st.session_state:
  st.session_state.word_trans = trans.text
+if 'correct_word' not in st.session_state:
+ st.session_state.correct_word = 0
  
 def new_word(new_word):
  st.session_state.choice = new_word
  new_trans = translator.translate(new_word,src='it', dest= 'en')
  st.session_state.word_trans = new_trans.text
 
+ 
  
 st.write(st.session_state.choice)
 
@@ -38,7 +41,7 @@ if word_input:
   st.write('Sbagliato!')
  elif st.session_state.word_trans == word_input:
   st.write('Esatto! Ora passiamo agli antonimi!')
-  word_ant=st.text_input('scrivi qui l\' antonimo: ','')
+  word_ant=st.text_input('scrivi qui l\' antonimo: ','', st.write(st.session_state.counter2))
   url= 'https://api.datamuse.com/words?rel_ant=' + st.session_state.word_trans + ''
   response = requests.get(url)
   datamuse = json.loads(response.text)
@@ -53,7 +56,9 @@ if word_input:
     st.write('Esatto!')
     new_word(choice(words))
     st.write(st.session_state.choice)
-
+    st.session_state.correct_word +=1
+  
+    
 st.write(st.session_state.counter1)
-st.write(st.session_state.counter2)
+
 
