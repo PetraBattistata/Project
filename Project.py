@@ -18,7 +18,7 @@ word_input = st.text_input('inserisci la tua traduzione:')
 st.write('Tentativi rimasti:',st.session_state.counter1)
 
 
-words = ['forte','alto','ricco','pieno','grande','brutto']
+words = ['forte','alto','ricco','pieno','brutto']
 if 'choice' not in st.session_state:
  st.session_state.choice = choice(words)
 translator = Translator()
