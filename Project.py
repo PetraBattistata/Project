@@ -60,7 +60,8 @@ if word_input:
     word_input = st.empty()
     st.button('Next word')
      #word_input.text_input('inserisci la tua traduzione:',value = '')
-    new_word(choice(words))
+    if st.button('Next word'):
+     new_word(choice(words))
     st.write(st.session_state.choice)
     st.session_state.correct_word +=1
 
