@@ -24,7 +24,7 @@ if 'choice' not in st.session_state:
 translator = Translator()
 trans = translator.translate(st.session_state.choice,src='it', dest= 'en')
 if 'word_trans' not in st.session_state:
- st.session_state.word_trans = trans.text
+ st.session_state['word_trans'] = trans.text
 if 'correct_word' not in st.session_state:
  st.session_state.correct_word = 0
  
