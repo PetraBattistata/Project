@@ -12,8 +12,8 @@ if st.session_state.counter1 == 0 or st.session_state.counter2 == 0:
  st.title('Game Over!')
  st.stop()
 
-word_input = st.text_input('inserisci la tua traduzione:', 'Tentativi rimasti:',st.write(st.session_state.counter1))
-
+word_input = st.text_input('inserisci la tua traduzione:')
+st.write('Tentativi rimasti:',st.session_state.counter1)
 
 words = ['forte','alto','ricco','pieno','grande','brutto']
 if 'choice' not in st.session_state:
@@ -41,7 +41,7 @@ if word_input:
   st.write('Sbagliato!')
  elif st.session_state.word_trans == word_input:
   st.write('Esatto! Ora passiamo agli antonimi!')
-  word_ant=st.text_input('scrivi qui l\' antonimo: ','', st.write('Tentativi rimasti:',st.session_state.counter2))
+  word_ant=st.text_input('scrivi qui l\' antonimo: ','')
   url= 'https://api.datamuse.com/words?rel_ant=' + st.session_state.word_trans + ''
   response = requests.get(url)
   datamuse = json.loads(response.text)
@@ -58,8 +58,8 @@ if word_input:
     new_word(choice(words))
     st.write(st.session_state.choice)
     st.session_state.correct_word +=1
-  
-    
+
+st.write('Tentativi rimasti:',st.session_state.counter2)    
 
 st.write(st.session_state.correct_word)
 
