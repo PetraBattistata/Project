@@ -41,7 +41,7 @@ if word_input:
   st.write('Sbagliato!')
  elif st.session_state.word_trans == word_input:
   st.write('Esatto! Ora passiamo agli antonimi!')
-  word_ant=st.text_input('scrivi qui l\' antonimo: ','', st.write(st.session_state.counter2))
+  word_ant=st.text_input('scrivi qui l\' antonimo: ','', st.write('Tentativi rimasti:',st.session_state.counter2))
   url= 'https://api.datamuse.com/words?rel_ant=' + st.session_state.word_trans + ''
   response = requests.get(url)
   datamuse = json.loads(response.text)
