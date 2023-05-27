@@ -29,7 +29,7 @@ def new_word(new_word):
  st.session_state.word_trans = new_trans.text
 
  
-st.write(st.session_state.choice)
+start = st.write(st.session_state.choice)
 
   
 if word_input:
@@ -52,7 +52,7 @@ if word_input:
    elif word_ant == st.session_state.antonym:
     st.write('Esatto!')
     new_word(choice(words))
-    st.write(st.session_state.choice)
+    start = st.write(st.session_state.choice)
 
 st.write(st.session_state.counter1)
 st.write(st.session_state.counter2)
