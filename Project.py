@@ -31,7 +31,7 @@ def new_word(new_word):
  
 start_word = st.write(st.session_state.choice)
 
-word_input = st.empty()
+
 #word_input.text_input('inserisci la tua traduzione:')
 word_input = st.text_input('inserisci la tua traduzione:','')
 st.write('Tentativi rimasti:',st.session_state.counter1)
