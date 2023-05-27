@@ -61,7 +61,7 @@ if word_input:
     st.write('Sbagliato!')
    elif word_ant == st.session_state.antonym:
     win = True
-    st.write('Esatto!')
+    st.write('Esatto! Premi Ctrl + R per continuare a giocare!')
     #st.experimental_rerun()
     #new_word(choice(words))
     #st.write(st.session_state.choice)
