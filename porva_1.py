@@ -11,7 +11,14 @@ if 'counter1' not in st.session_state or 'counter2' not in st.session_state :
 if st.session_state.counter1 < 1 or st.session_state.counter2 < 1:
  st.title('Game Over!')
  st.stop()
-
+ 
+win = False
+if win == True:
+ st.title('You win! Let\'s play again!')
+ restart = st.button('Try Again')
+ if restart:
+  st.experimental_rerun()
+ st.stop
 
 words = ['forte','alto','ricco']
 if 'choice' not in st.session_state:
@@ -53,8 +60,9 @@ if word_input:
     st.session_state.counter2 -=1
     st.write('Sbagliato!')
    elif word_ant == st.session_state.antonym:
-    st.write('Esatto!')
-    st.experimental_rerun()
+    win = True
+    #st.write('Esatto!')
+    #st.experimental_rerun()
     #new_word(choice(words))
     #st.write(st.session_state.choice)
 
