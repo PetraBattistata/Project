@@ -24,6 +24,8 @@ if 'correct_word' not in st.session_state:
      st.session_state.correct_word = 0
   
 def new_word(new_word):
+ global st.session_state.choice
+ global st.session_state.word_trans
  st.session_state.choice = new_word
  new_trans = translator.translate(new_word,src='it', dest= 'en')
  st.session_state.word_trans = new_trans.text
