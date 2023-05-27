@@ -22,6 +22,7 @@ translator = Translator()
 trans = translator.translate(st.session_state.choice,src='it', dest= 'en')
 if 'word_trans' not in st.session_state:
  st.session_state.word_trans = trans.text
+st.write(st.session_state.word_trans)
  
 def new_word(new_word):
  st.session_state.choice = new_word
