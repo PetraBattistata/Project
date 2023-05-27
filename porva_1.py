@@ -3,7 +3,7 @@ import json,requests
 import streamlit as st
 from googletrans import Translator
 
-st.title('Adjectives')
+st.title('Fun with adjectives')
 
 if 'counter1' not in st.session_state or 'counter2' not in st.session_state :
  st.session_state.counter1 = 3
@@ -12,13 +12,6 @@ if st.session_state.counter1 < 1 or st.session_state.counter2 < 1:
  st.title('Game Over!')
  st.stop()
  
-win = False
-if win == True:
- st.title('You win! Let\'s play again!')
- restart = st.button('Try Again')
- if restart:
-  st.experimental_rerun()
- st.stop
 
 words = ['forte','alto','ricco']
 if 'choice' not in st.session_state:
@@ -62,7 +55,3 @@ if word_input:
    elif word_ant == st.session_state.antonym:
     win = True
     st.write('Esatto! Premi Ctrl + R per continuare a giocare!')
-    #st.experimental_rerun()
-    #new_word(choice(words))
-    #st.write(st.session_state.choice)
-
