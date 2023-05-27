@@ -34,7 +34,7 @@ st.write(st.session_state.choice)
 
 word_input = st.empty()
 #word_input.text_input('inserisci la tua traduzione:')
-word_input = st.text_input('inserisci la tua traduzione:')
+word_input = st.text_input('inserisci la tua traduzione:','')
 st.write('Tentativi rimasti:',st.session_state.counter1)
   
 if word_input:
@@ -42,8 +42,8 @@ if word_input:
   st.session_state.counter1 -=1
   st.write('Sbagliato!')
  elif st.session_state.word_trans == word_input:
-  st.write('Esatto! Ora passiamo agli antonimi!')
-  word_ant=st.text_input('scrivi qui l\' antonimo: ','')
+  st.write('Tentativi rimasti per Antonimi:',st.session_state.counter2)
+  word_ant=st.text_input('Esatto! Ora passiamo agli antonimi: ','')
   url= 'https://api.datamuse.com/words?rel_ant=' + st.session_state.word_trans + ''
   response = requests.get(url)
   datamuse = json.loads(response.text)
@@ -60,8 +60,7 @@ if word_input:
     new_word(choice(words))
     st.write(st.session_state.choice)
     st.session_state.correct_word +=1
-
-st.write('Tentativi rimasti:',st.session_state.counter2)    
+    
 
 st.write(st.session_state.correct_word)
 
