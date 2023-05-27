@@ -12,11 +12,6 @@ if st.session_state.counter1 == 0 or st.session_state.counter2 == 0:
  st.title('Game Over!')
  st.stop()
 
-word_input = st.empty()
-#word_input.text_input('inserisci la tua traduzione:')
-word_input = st.text_input('inserisci la tua traduzione:')
-st.write('Tentativi rimasti:',st.session_state.counter1)
-
 
 words = ['forte','alto','ricco','pieno','brutto']
 if 'choice' not in st.session_state:
@@ -37,6 +32,10 @@ def new_word(new_word):
  
 st.write(st.session_state.choice)
 
+word_input = st.empty()
+#word_input.text_input('inserisci la tua traduzione:')
+word_input = st.text_input('inserisci la tua traduzione:')
+st.write('Tentativi rimasti:',st.session_state.counter1)
   
 if word_input:
  if st.session_state.word_trans != word_input:
@@ -58,10 +57,7 @@ if word_input:
    elif word_ant == st.session_state.antonym:
     st.write('Esatto!')
     word_input = st.empty()
-    renew= st.button('Next word')
-     #word_input.text_input('inserisci la tua traduzione:',value = '')
-    if renew:
-     new_word(choice(words))
+    new_word(choice(words))
     st.write(st.session_state.choice)
     st.session_state.correct_word +=1
 
