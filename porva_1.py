@@ -31,7 +31,7 @@ def new_word(new_word):
 st.write(st.session_state.choice)
 
 word_input = st.text_input('inserisci la tua traduzione: ','')
-st.write(st.session_state.counter1)
+st.write('Tentativi: ', st.session_state.counter1)
 
   
 if word_input:
@@ -47,7 +47,7 @@ if word_input:
    st.session_state.antonym = datamuse[0]['word']
   st.write(st.session_state.antonym)
   word_ant=st.text_input('scrivi qui l\' antonimo: ','')
-  st.write(st.session_state.counter2)
+  st.write('Tentativi: ', st.session_state.counter2)
   if word_ant:
    if word_ant != st.session_state.antonym:
     st.session_state.counter2 -=1
