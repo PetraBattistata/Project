@@ -23,7 +23,7 @@ if win == True:
 words = ['forte','alto','ricco']
 if 'choice' not in st.session_state:
  st.session_state.choice = choice(words)
-translator = Translator()
+translator = Translator(service_urls=['translate.googleapis.com'])
 trans = translator.translate(st.session_state.choice,src='it', dest= 'en')
 if 'word_trans' not in st.session_state:
  st.session_state.word_trans = trans.text
