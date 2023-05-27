@@ -12,6 +12,10 @@ if st.session_state.counter1 == 0 or st.session_state.counter2 == 0:
  st.title('Game Over!')
  st.stop()
 
+def new_word(new_word):
+ st.session_state.choice = new_word
+ new_trans = translator.translate(new_word,src='it', dest= 'en')
+ st.session_state.word_trans = new_trans.text
 
 words = ['forte','alto','ricco','pieno','brutto']
 if 'choice' not in st.session_state:
