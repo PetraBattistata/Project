@@ -12,15 +12,17 @@ if st.session_state.counter1 < 1 or st.session_state.counter2 < 1:
  st.title('Game Over!')
  st.stop()
  
+words = ['forte','alto','giovane', 'nuovo', 'aperto','grande', 'caldo', 
+         'amichevole', 'lungo', 'bagnato', 'pesante', 'pieno', 'veloce', 
+        'ordinato', 'presto', 'silenzioso', 'dolce', 'facile','primo']
 
-words = ['forte','alto']
 if 'choice' not in st.session_state:
  st.session_state.choice = choice(words)
 translator = Translator(service_urls=['translate.googleapis.com'])
 trans = translator.translate(st.session_state.choice,src='it', dest= 'en')
 if 'word_trans' not in st.session_state:
  st.session_state.word_trans = trans.text
-#st.write(st.session_state.word_trans)
+st.write(st.session_state.word_trans)
  
 def new_word(new_word):
  st.session_state.choice = new_word
@@ -45,7 +47,7 @@ if word_input:
   datamuse = json.loads(response.text)
   if 'antonym' not in st.session_state:
    st.session_state.antonym = datamuse[0]['word']
-  #st.write(st.session_state.antonym)
+  st.write(st.session_state.antonym)
   word_ant=st.text_input('scrivi qui l\' antonimo: ','')
   st.write('Tentativi: ', st.session_state.counter2)
   if word_ant:
