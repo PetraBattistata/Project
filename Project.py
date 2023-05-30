@@ -13,8 +13,8 @@ if st.session_state.counter1 < 1 or st.session_state.counter2 < 1:
  st.stop()
  
 words = ['forte','alto','giovane', 'nuovo', 'aperto','grande', 'caldo', 
-         'amichevole', 'lungo', 'bagnato', 'pesante', 'pieno', 'veloce', 
-        'ordinato', 'presto', 'silenzioso', 'dolce', 'facile','primo']
+         'amichevole', 'lungo', 'bagnato', 'pesante', 'pieno',  
+        'ordinato', 'silenzioso', 'dolce', 'facile','veloce']
 
 if 'choice' not in st.session_state:
  st.session_state.choice = choice(words)
