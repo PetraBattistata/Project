@@ -20,7 +20,7 @@ translator = Translator(service_urls=['translate.googleapis.com'])
 trans = translator.translate(st.session_state.choice,src='it', dest= 'en')
 if 'word_trans' not in st.session_state:
  st.session_state.word_trans = trans.text
-st.write(st.session_state.word_trans)
+#st.write(st.session_state.word_trans)
  
 def new_word(new_word):
  st.session_state.choice = new_word
@@ -28,7 +28,7 @@ def new_word(new_word):
  st.session_state.word_trans = new_trans.text
 
  
-#st.write(st.session_state.choice)
+st.write(st.session_state.choice)
 
 word_input = st.text_input('inserisci la tua traduzione: ','')
 st.write('Tentativi: ', st.session_state.counter1)
